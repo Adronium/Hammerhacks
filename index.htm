@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<Html>
+    <head>
+            <title> My cool website</title>
+
+            <style>
+                img {
+                    width: 600px;
+                    height: auto
+                }
+                h1 {
+                    color: red;
+                }
+            </style>
+    </head>
+    <body>
+        <h1>My cool website</h1>
+        <p>I think HTML is neat!</p>
+
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/028/086/328/small_2x/bowl-of-rice-isolated-on-transparent-background-file-cut-out-ai-generated-png.png"
+    </body>
+
+    <blockquote>"It doesn't matter how you do it it just matters that you did it" - Zellsis</blockquote>
+    <button onclick="changeQuote()">Change Quote</button>
+    <script>
+        var index = 0;
+
+        function changeQuote() {
+            var quotes = [
+                `"Amaru likes rice" - Adrian Jurinic`,
+                `"Neon is the most glue eating character to ever exist" - Marvin B.`,
+                `"Bigger" - Amaru A.`,
+                `"It doesn't matter how you do it it just matters that you did it" - Zellsis`
+            ];
+            var blockquote = document.querySelector("blockquote");
+            blockquote.innerHTML = quotes[index];
+
+            index++;
+            if(index >= 4){
+                index = 0;
+            }
+        }
+    </script>
+</Html>
